@@ -22,3 +22,8 @@ A student user should:
 * A **quiz** can be multiple choice or short, free-form (typed out, one word answers)
 * An instructor 
 * Be able to **view** summary of entire **cohort's** **progress** as a whole
+
+## Sources
+* http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
+
+* http://eewang.github.io/blog/2013/03/12/how-and-when-to-use-single-table-inheritance-in-rails/
