@@ -25,9 +25,9 @@ s5.cohort.push(c5)
 
 i1 = Instructor.create({last_name: "Pak", first_name: "Suhyun", email: "suhyun@quizapp.com", password: "123", password_confirmation: "123"})
 i2 = Instructor.create({last_name: "Olagundoye", first_name: "De", email: "de@quizapp.com", password: "123", password_confirmation: "123"})
-i3 = Instructor.create({last_name: "Konchinskiy", first_name: "Serge", email: "serge@quizapp.com", password: "123", password_confirmation: "123"})
-i4 = Instructor.create({last_name: "Boseroy", first_name: "Ona", email: "suhyun@quizapp.com", password: "123", password_confirmation: "123"})
-i5 = Instructor.create({last_name: "Gandikota", first_name: "Anusha", email: "suhyun@quizapp.com", password: "123", password_confirmation: "123"})
+i3 = Instructor.create({last_name: "Kolchinskiy", first_name: "Sergey", email: "sergey@quizapp.com", password: "123", password_confirmation: "123"})
+i4 = Instructor.create({last_name: "Boseroy", first_name: "Ona", email: "ona@quizapp.com", password: "123", password_confirmation: "123"})
+i5 = Instructor.create({last_name: "Gandikota", first_name: "Anusha", email: "anusha@quizapp.com", password: "123", password_confirmation: "123"})
 
 c1.instructor.push(i1)
 c2.instructor.push(i3)
