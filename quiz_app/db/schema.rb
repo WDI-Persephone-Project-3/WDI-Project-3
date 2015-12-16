@@ -28,7 +28,8 @@ ActiveRecord::Schema.define(version: 20151216205107) do
   end
 
   create_table "instructors", force: :cascade do |t|
-    t.string "name"
+    t.string "last_name"
+    t.string "first_name"
     t.string "email"
     t.string "password_digest"
   end
