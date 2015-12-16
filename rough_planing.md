@@ -1,3 +1,5 @@
+![erd pic1](md_images/ERDv1.png)
+
 ### User Story:
 
 An instructor user should:
