@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   shallow do
     resources :instructors do
-      resources :cohorts, only: [:index, :show]
+      resources :cohorts
     end
   end
 
