@@ -1,3 +1,14 @@
+<% if @student %>
+  <h1><%= @quiz.test_day %></h1>
+  <p>Created by <%= @quiz.instructor_id %></p>
 
-<%= @quiz.test_day %>
-<p><%= @quiz.instructor
+  <ul>
+  <% @quizzes.each do |quiz| %>
+    <li>
+      <p><%= quiz.question %></p> 
+    </li>
+    <li>
+      <p><%= quiz.question.answers %></p>
+    </li>
+  <% end %>
+  </ul>
