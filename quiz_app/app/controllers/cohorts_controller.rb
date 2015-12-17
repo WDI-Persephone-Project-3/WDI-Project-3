@@ -1,6 +1,9 @@
 class CohortsController < ApplicationController
 	
 	def show
+		#this will come from sessions
+		@cohort = Instructor.first.cohorts.first
+
 	end
 
 	def new 
@@ -16,7 +19,6 @@ class CohortsController < ApplicationController
 	end
 
 	def update
+	end 
 
-
-	def 
 end
