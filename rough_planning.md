@@ -29,3 +29,59 @@ A student user should:
 * http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
 
 * http://eewang.github.io/blog/2013/03/12/how-and-when-to-use-single-table-inheritance-in-rails/
+
+###Entity Relationship Diagram:
+```
+  +-----------------+                                                +-----------------+
+  |   Instructors   |               +----------------+               |    Students     |
+  |                 |               |     Cohorts    |               |                 |
+  |- name           |1              |                |1              |- name           |
+  |- email          +---------------+ - name         +---------------+- email          |
+  |- password_digest|              *| - instructor_id|              *|- password_digest|
+  |- img_url        |               |                |               |- img_url        |                                             |                 |               |                |               |- cohort_id      |
+  +--------+--------+               +----------------+               +--------+--------+
+          1|                                                                 1|
+           |*                                                                 |
+  +--------+--------+               +----------------+                        |
+  |     Quizzes     |               |    Responses   |                        |           
+  |                 |               |                |                        |
+  | - instructor_id |1              |  - choice      |*                       |        
+  | - test_day      +---------------+  - student_id  +------------------------+                                     
+  |                 |              *|  - quiz_id     |                                 
+  |                 |               |  - question_id | 
+  |                 |               |                | 
+  +--------+--------+               +--------+-------+  
+          *|                                1| 
+           |                                 |
+  +--------+--------+                        |
+  |Questions_Quizzes|                        |
+  |                 |                        | 
+  | - question_id   |                        |
+  | - quiz_id       |                        |
+  |                 |                        |
+  |                 |                        |
+  |                 |                        |
+  +--------+--------+                        | 
+           |                                 |
+		   |*                                |
+  +--------+--------+                        |
+  |    Questions    |                        |
+  |                 |                        |
+  |  - content      |1                       | 
+  |                 +------------------------+
+  |                 |
+  |                 |
+  |                 |
+  +--------+--------+		   
+		  1|
+		   |*
+  +--------+--------+
+  |     Answers     |
+  |                 |
+  |  - choice       |
+  |  - is_correct   |
+  |  - question_id  |
+  |                 |
+  |                 |
+  +-----------------+
+```
