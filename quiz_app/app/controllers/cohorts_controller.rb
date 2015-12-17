@@ -2,7 +2,7 @@ class CohortsController < ApplicationController
 	
 	def show
 		#this will come from sessions
-		@cohort = Instructor.first.cohorts.first
+		@cohort = Instructor.params[:id].cohorts
 
 	end
 
