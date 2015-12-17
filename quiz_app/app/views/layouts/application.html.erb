@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="header">
+  <!-- if current_instructor or current_student (defined in application controller) -->
+  <!-- show username -->
+  <!-- show link to log out -->
+  <!-- else -->
+  <!-- link_to log in and link_to sign up -->
+  <%= yield :header %>
+  </div>
+
+  <div class="container">
+
+
+  <%= yield %>
+  </div>
 
 </body>
 </html>
