@@ -9,18 +9,28 @@
 <body>
 
   <div class="header">
-  <!-- if current_instructor or current_student (defined in application controller) -->
-  <!-- show username -->
-  <!-- show link to log out -->
-  <!-- else -->
-  <!-- link_to log in and link_to sign up -->
+    <% if current_user %>
+      <p><%= current_user.email %></p>
+      <p><%= link_to "Log Out", logout_path, method: "delete" %></p>
+    <% else %>
+      <%= link_to 'Log In', '/login' %>
+      <%= link_to 'Sign Up', '/signup' %>
+    <% end %>
   <%= yield :header %>
   </div>
 
   <div class="container">
-
+    <% if current_user %>
+      <h1>Hello <%= current_user.first_name %></h1>
+    <% else %>
+      <h1>Welcome to QuizApp!</h1>
+    <% end %>
 
   <%= yield %>
+  </div>
+
+  <div class="footer">
+    <p>Copyright @ Team SODAS</p>
   </div>
 
 </body>
