@@ -1,8 +1,10 @@
 class InstructorsController < ApplicationController
 
+  def dash
+  end
+
   def show
     @instructor = Instructor.find(params[:id])
-    
   end
 
   def edit
