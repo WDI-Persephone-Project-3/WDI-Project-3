@@ -1,0 +1,9 @@
+<h1>Log-in Screen</h1>
+
+<%= form_tag '/login' do %>
+  <!-- Second input is the value, so we set to nil -->
+  <%= text_field_tag :username, nil, placeholder: "Username"%>
+  <%= password_field_tag :password, nil, placeholder: "Password" %>
+<!--   <%= select_tag "User", "<option>Instructor</option><option>Student</option>".html_safe %> -->
+  <%= submit_tag value="Log-In" %>
+<% end %>
