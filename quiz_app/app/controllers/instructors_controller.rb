@@ -16,6 +16,9 @@ class InstructorsController < ApplicationController
     @instructor.update(instructor_params)
   end
   
+  def cohort
+  end
+
   private 
 
   def instructor_params
