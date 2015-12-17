@@ -1,22 +1,24 @@
 Rails.application.routes.draw do
 
-  post '/login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
-
   root 'sessions#new'
 
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+  get '/signup' => 'sessions#new_user'
+  post '/signup' => 'sessions#create_user'  
+
+  get '/instructors/dash', :to => 'instructors#dash'
+
+  get '/students/dash', :to => 'students#dash'
+
   shallow do
-    resources :instructors do
+    resources :instructors, only: [:show, :edit, :update, :destroy] do
       resources :cohorts
     end
   end
 
-  get '/instructors/dash' => 'instructors#dash'
-
-  get '/students/dash' => 'students#dash'
-
   resources :quizzes
-  resources :students 
+  resources :students, only: [:show, :edit, :update, :destroy] 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
