@@ -1,0 +1,10 @@
+<h1>All Quizzes</h1>
+<p><a href="/quizzes/new" class="new-quiz">Create a new quiz!</a></p>
+
+<ul>
+<% @quizzes.each do |q| %>
+  <li>
+    <h3><a href="/quizzes/<%= quiz[:id] %>"><%= quiz[:test_day] %></a></h3>
+  </li>
+<% end %>
+</ul>
