@@ -2,9 +2,9 @@ class SessionsController < ApplicationController
 
 	def new
     if session[:user_class] == "Student"
-      redirect_to 'students/dash'
+      redirect_to '/students/dash'
     elsif session[:user_class] == "Instructor"
-      redirect_to 'instructors/dash'
+      redirect_to '/instructors/dash'
     else
       render :new
     end
@@ -34,9 +34,9 @@ class SessionsController < ApplicationController
 
   def new_user
     if session[:user_class] == "Student"
-      redirect_to 'students/dash'
+      redirect_to '/students/dash'
     elsif session[:user_class] == "Instructor"
-      redirect_to 'instructors/dash'
+      redirect_to '/instructors/dash'
     else
       render :new_user
     end
