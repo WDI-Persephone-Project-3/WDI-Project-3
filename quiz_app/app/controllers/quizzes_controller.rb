@@ -8,6 +8,8 @@ class QuizzesController < ApplicationController
   # GET '/quizzes/new'
   def new
     @quiz = Quiz.new
+    @question = @quiz.questions.build
+    @answer = @question.answers.build
   end
 
   # POST '/quizzes'

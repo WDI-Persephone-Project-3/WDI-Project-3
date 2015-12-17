@@ -1,0 +1,7 @@
+<%= form_for [:quiz, :question, :answer] do |q| %>
+  <%= q.label :test_day %>
+  <%= q.date_field :test_day %>
+  <%= q.label :question %>
+  <%= q.select_tag :answer, multiple: true %>
+  <%= q.submit %>
+<% end %>
