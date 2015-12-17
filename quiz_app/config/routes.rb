@@ -45,9 +45,10 @@ Rails.application.routes.draw do
   get '/signup' => 'sessions#new_user'
   post '/signup' => 'sessions#create_user'  
 
-  get '/instructors/dash', :to => 'instructors#dash'
+  get '/instructors/dash' => 'instructors#dash'
+  get '/students/dash' => 'students#dash'
+  post '/instructors/dash/cohort' => 'instructors#cohort'
 
-  get '/students/dash', :to => 'students#dash'
 
   shallow do
     resources :instructors, only: [:show, :edit, :update, :destroy] do
