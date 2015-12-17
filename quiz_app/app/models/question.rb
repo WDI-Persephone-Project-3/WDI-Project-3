@@ -4,7 +4,7 @@ class Question < ActiveRecord::Base
   has_one :response
 
   def correct_answer
-  	self.answer
+  	@correct = self.answers.find_by(is_correct: true)
   end
 
 end
