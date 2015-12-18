@@ -10,6 +10,7 @@ c2 = Cohort.create({name: "Prof X", instructor: i3})
 c3 = Cohort.create({name: "Storm", instructor: i2})
 c4 = Cohort.create({name: "Wonder Woman", instructor: i4})
 c5 = Cohort.create({name: "Cat Woman", instructor: i5})
+c6 = Cohort.create({name: "Swerve", instructor: i3})
 
 s1 = Student.create({last_name: "Wayne", first_name: "John", email: "johnwayne@gmail.com", password: "123", password_confirmation: "123", cohort: c1})
 

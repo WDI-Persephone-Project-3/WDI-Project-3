@@ -1,10 +1,7 @@
-<%= form_tag '/instructors/dash/cohort' do %>
-  <!-- Second input is the value, so we set to nil -->
-  <%= select_tag :cohort, options_for_select(Cohort.where(instructor_id: current_user.id).pluck(:name)) %>
-  <%= submit_tag value="Switch Cohort" %>
-<% end %>
+<!-- Second input is the value, so we set to nil -->
+<%= select_tag :cohort, options_for_select(Cohort.where(instructor_id: current_user.id).pluck(:name)), :class => 'cohort-choice' %>
 
-<a href="">Create a New Quiz</a>
-<a href="">All Quizzes</a>
+<a href="">Create a New Quiz</a><br>
+<a href="">All Quizzes</a><br>
 <a href="">Students</a>
 <p>Dashboard Stuff</p>

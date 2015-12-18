@@ -17,6 +17,7 @@ class InstructorsController < ApplicationController
   end
   
   def cohort
+    {name: "Name", test: "Test"}
   end
 
   private 
