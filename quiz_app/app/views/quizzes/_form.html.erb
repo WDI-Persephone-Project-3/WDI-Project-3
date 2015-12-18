@@ -3,10 +3,10 @@
   <%= date_field_tag(:test_day) %>
   <br>
   <%= label_tag(:question, "Question:") %>
-  <%= select_tag(:question, include_blank: true) %> <!-- HELP: How do I get other options in here without having to include them in here itself -->
+  <%= text_field_tag(:question) %> <!-- HELP: How do I get other options in here without having to include them in here itself -->
   <br>
   <%= label_tag(:answer, "Answer") %>
-  <%= select_tag(:answer, include_blank: true, multiple: true) %>
+  <%= text_field_tag(:answer) %>
   <br>
   <%= submit_tag("Create") %>
 <% end %>
