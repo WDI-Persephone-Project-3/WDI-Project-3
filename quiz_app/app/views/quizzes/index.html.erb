@@ -2,7 +2,8 @@
 
 <!-- if an instructor is logged in -->
 <!-- show a list of all quizzes -->
-<% if current_user %>
+
+<% if current_user.class == Instructor %>
   <ul>
    <% @quizzes.each do |quiz| %>
     <li>
@@ -12,7 +13,7 @@
   </ul>
   <p><a href="/quizzes/new" class="new-quiz">Create a new quiz!</a></p>
 <!-- else if student is logged in, show a list of all quizzes THEY have taken -->
-<% elsif @student %>
+<% elsif current_user.class == Student %>
   <ul>
     <% @quizzes.responses.student.each do |quiz| %> <!-- HELP! -->
     <li>
