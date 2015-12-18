@@ -4,8 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_user
-    @current_user ||= Student.find(session[:user_id]) if session[:user_class] == "Student"
-    @current_user ||= Instructor.find(session[:user_id]) if session[:user_class] == "Instructor"
+    if session[:user_class] == "Student"
+    @current_user ||= Student.find(session[:user_id])
+    elsif session[:user_class] == "Instructor" 
+    @current_user ||= Instructor.find(session[:user_id])
+    end
   end
 
   helper_method :current_user
