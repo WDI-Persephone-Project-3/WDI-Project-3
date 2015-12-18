@@ -49,4 +49,4 @@ test_quiz.questions.push(q3)
 
 r1 = Response.create(choice: a1, student: s1, quiz: test_quiz, question: q1)
 r2 = Response.create(choice: a7, student: s1, quiz: test_quiz, question: q2)
-r3 = Response.create(choice: a12, student: s1, quiz: test_quiz, question: q3)
+r3 = Response.create(choice: a11, student: s1, quiz: test_quiz, question: q3)
