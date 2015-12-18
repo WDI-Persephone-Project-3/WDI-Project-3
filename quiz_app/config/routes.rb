@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/instructors/dash' => 'instructors#dash'
   get '/students/dash' => 'students#dash'
-  post '/instructors/dash/cohort' => 'instructors#cohort'
+  get '/instructors/dash/cohort' => 'instructors#cohort'
 
 
   shallow do
