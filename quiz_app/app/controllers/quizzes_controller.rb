@@ -5,6 +5,11 @@ class QuizzesController < ApplicationController
     @quizzes = Quiz.all
   end
 
+  # GET '/quizzes/1'
+  def show
+    @quiz = Quiz.find(params[:id])
+  end
+
   # GET '/quizzes/new'
   def new
     @quiz = Quiz.new
@@ -21,11 +26,5 @@ class QuizzesController < ApplicationController
       render :new
     end
   end
-
-  # GET '/quizzes/1'
-  def show
-    @quiz = Quiz.find(params[:id])
-  end
-
 
 end
