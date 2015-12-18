@@ -1,9 +1,8 @@
 <h1>All Quizzes</h1>
-<p><a href="/quizzes/new" class="new-quiz">Create a new quiz!</a></p>
 
 <!-- if an instructor is logged in -->
 <!-- show a list of all quizzes -->
-<% if @instructor %>
+<% if current_user %>
   <ul>
    <% @quizzes.each do |quiz| %>
     <li>
@@ -11,6 +10,7 @@
     </li>
    <% end %>
   </ul>
+  <p><a href="/quizzes/new" class="new-quiz">Create a new quiz!</a></p>
 <!-- else if student is logged in, show a list of all quizzes THEY have taken -->
 <% elsif @student %>
   <ul>

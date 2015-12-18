@@ -13,14 +13,17 @@ c5 = Cohort.create({name: "Cat Woman", instructor: i5})
 c6 = Cohort.create({name: "Swerve", instructor: i3})
 
 s1 = Student.create({last_name: "Wayne", first_name: "John", email: "johnwayne@gmail.com", password: "123", password_confirmation: "123", cohort: c1})
-
 s2 = Student.create({last_name: "Kent", first_name: "Clarke", email: "notsuperman@gmail.com", password: "123", password_confirmation: "123", cohort: c2})
-
 s3 = Student.create({last_name: "BeGood", first_name: "Johnny", email: "goodygoody@gmail.com", password: "123", password_confirmation: "123", cohort: c3})
-
 s4 = Student.create({last_name: "Stallone", first_name: "Sylvester", email: "rocky@gmail.com", password: "123", password_confirmation: "123", cohort: c4})
-
-s5 = Student.create({last_name: "BeGood", first_name: "Johnny", email: "goodygoody@gmail.com", password: "123", password_confirmation: "123", cohort: c5})
+s5 = Student.create({last_name: "McFly", first_name: "Martin", email: "biffsucks@gmail.com", password: "123", password_confirmation: "123", cohort: c5})
+s6 = Student.create({last_name: "Gump", first_name: "Forrest", email: "run4estrun@gmail.com", password: "123", password_confirmation: "123", cohort: c2})
+s7 = Student.create({last_name: "Smith", first_name: "Will", email: "welcomeToEarth@gmail.com", password: "123", password_confirmation: "123", cohort: c3})
+s8 = Student.create({last_name: "Soze", first_name: "Keyser", email: "whoiskeyser@gmail.com", password: "123", password_confirmation: "123", cohort: c1})
+s9 = Student.create({last_name: "Ripley", first_name: "Ellen", email: "alienz@gmail.com", password: "123", password_confirmation: "123", cohort: c4})
+s10 = Student.create({last_name: "Connor", first_name: "Sarah", email: "xoxoT800xoxo@gmail.com", password: "123", password_confirmation: "123", cohort: c5})
+s11 = Student.create({last_name: "Thurman", first_name: "Uma", email: "ikillbill@gmail.com", password: "123", password_confirmation: "123", cohort: c1})
+s12 = Student.create({last_name: "Macguff", first_name: "Juno", email: "impregnant@gmail.com", password: "123", password_confirmation: "123", cohort: c2})
 
 q1 = Question.create({content: "1 + 1"})
 q2 = Question.create({content: "1 + 2"})
